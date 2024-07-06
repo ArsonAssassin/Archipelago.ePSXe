@@ -2,10 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>0.0.2</Version>
+    <Authors>ArsonAssassin</Authors>
+    <Product>Archipelago.ePSXe</Product>
+    <PackageId>Archipelago.ePSXe</PackageId>
+    <Description>A class library for interfacing between ePSXe emulator and Archipelago Multiworld Randomiser.</Description>
+    <RepositoryUrl>https://github.com/ArsonAssassin/Archipelago.ePSXe</RepositoryUrl>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Archipelago.MultiClient.Net" Version="6.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

@@ -21,9 +21,6 @@ namespace Archipelago.ePSXe
             if (pid == 0)
             {
                 Console.WriteLine("ePSXe not found.");
-                Console.WriteLine("Press any key to exit.");
-                Console.Read();
-                System.Environment.Exit(0);
                 return false;
             }
             return true;

@@ -10,6 +10,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
+#pragma warning disable CS1998
+#pragma warning disable CS4014 
 namespace Archipelago.ePSXe
 {
     public class ArchipelagoClient
@@ -107,15 +109,15 @@ namespace Archipelago.ePSXe
                 {
                     Task.Factory.StartNew(async () =>
                     {
-                        await Helpers.MonitorAddress(location.Address, int.Parse(location.CheckValue));
+                        await Helpers.MonitorAddress(location.Address, int.Parse(location.CheckValue), location.CompareType);
                         SendLocation(location);
                     });
                 }
-                else if(location.CheckType == LocationCheckType.UInt)
+                else if (location.CheckType == LocationCheckType.UInt)
                 {
                     Task.Factory.StartNew(async () =>
                     {
-                        await Helpers.MonitorAddress(location.Address, 4, Convert.ToUInt32(location.CheckValue, 16), false);
+                        await Helpers.MonitorAddress(location.Address, 4, Convert.ToUInt32(location.CheckValue, 16), location.CompareType, false);
                         SendLocation(location);
                     });
                 }

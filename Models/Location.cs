@@ -18,5 +18,6 @@ namespace Archipelago.ePSXe.Models
         public int Id { get; set; }
         public LocationCheckType CheckType { get; set; }
         public string CheckValue { get; set; }
+        public LocationCheckCompareType CompareType { get; set; }
     }
 }
