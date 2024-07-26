@@ -10,6 +10,7 @@ namespace Archipelago.ePSXe.Models
     {
         Bit = 0,
         Int = 1,
-        UInt = 2
+        UInt = 2,
+        Byte = 3
     }
 }

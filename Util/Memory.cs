@@ -181,6 +181,10 @@ namespace Archipelago.ePSXe.Util
         {
             return Write(address, BitConverter.GetBytes(value));
         }
+        public static bool Write(int address, short value)
+        {
+            return Write(address, BitConverter.GetBytes(value));
+        }
         public static bool Write(int address, uint value)
         {
             return Write(address, BitConverter.GetBytes(value));
