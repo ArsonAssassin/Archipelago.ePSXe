@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>0.0.4</Version>
+    <Version>0.0.5</Version>
     <Authors>ArsonAssassin</Authors>
     <Product>Archipelago.ePSXe</Product>
     <PackageId>Archipelago.ePSXe</PackageId>
@@ -18,11 +18,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Archipelago.MultiClient.Net" Version="6.2.0" />
+    <PackageReference Include="Archipelago.Core" Version="0.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Archipelago.Core\Archipelago.Core.csproj" />
   </ItemGroup>
 
 </Project>
