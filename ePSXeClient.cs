@@ -10,19 +10,21 @@ namespace Archipelago.ePSXe
 {
     public class ePSXeClient : IGameClient
     {
-    public bool IsConnected { get; set; }
-        public int ProcId { get; set; } = Memory.EPSXE_PROCESSID;
+        public bool IsConnected { get; set; }
+        public int ProcId { get; set; }
+        public string ProcessName { get; set; }
+
         public ePSXeClient()
         {
-            
+            ProcessName = "ePSXe";
+            ProcId = Memory.GetProcIdFromExe(ProcessName);
         }
         public bool Connect()
         {
-            Console.WriteLine("Connecting to ePSXe");
-            var pid = Memory.EPSXE_PROCESSID;
-            if (pid == 0)
+            Console.WriteLine($"Connecting to {ProcessName}");            
+            if (ProcId == 0)
             {
-                Console.WriteLine("ePSXe not found.");
+                Console.WriteLine($"{ProcessName} not found.");
                 return false;
             }
             return true;
